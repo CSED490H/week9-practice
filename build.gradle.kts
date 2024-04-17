@@ -1,6 +1,5 @@
 plugins {
     java
-    jacoco
 }
 
 group = "edu.postech.csed490h"
@@ -18,7 +17,7 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
-    finalizedBy(tasks.jacocoTestReport)
+    // TODO: after each test, create jacoco test report
 }
 
 tasks.jacocoTestReport {
@@ -26,6 +25,6 @@ tasks.jacocoTestReport {
         xml.required = false
         csv.required = false
         html.required = true
-        html.outputLocation = layout.buildDirectory.dir("jacocoHtml")
+        // TODO: output report to "jacocoHtml"
     }
 }
